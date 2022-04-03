@@ -10,3 +10,11 @@ function draw() {
   arrow.show();
 
 }
+
+function keyPressed() {
+  if (keyCode === RIGHT_ARROW) {
+    arrow.move(1);
+  } else if (keyCode === LEFT_ARROW) {
+    arrow.move(-1);
+  }
+}
