@@ -8,13 +8,19 @@ function setup() {
 function draw() {
   background(0);
   arrow.show();
+  arrow.move();
 
+}
+function keyReleased() {
+  if (key != ' ') {
+  arrow.setDir(0);
+  }
 }
 
 function keyPressed() {
   if (keyCode === RIGHT_ARROW) {
-    arrow.move(1);
+    arrow.setDir(1);
   } else if (keyCode === LEFT_ARROW) {
-    arrow.move(-1);
+    arrow.setDir(-1 );
   }
 }
